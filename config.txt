@@ -1,0 +1,2 @@
+client-id: i don't want to share my client ID in case it's a security concern lol
+client-secret: but just paste it in no quotes with a space after the semicolon and it works
