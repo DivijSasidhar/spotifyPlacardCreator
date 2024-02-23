@@ -79,14 +79,14 @@ data = requests.get(track.album_cover).content
 with open(path + f'album_cover.png', 'wb') as f:
     f.write(data)
 
-data = {'SongTitle': track.name,
-        'ArtistName': ', '.join(track.artist_name),
-        'LengthMinutes': length_min,
-        'LengthSeconds': length_sec,
-        'ChosenMinutes': chosen_min,
-        'ChosenSeconds': chosen_sec,
-        '@SongCode': path + f'spotify_code.png',
-        '@AlbumCover': path + f'album_cover.png'
+data = {'songtitle': track.name,
+        'artistname': ', '.join(track.artist_name),
+        'totalmin': length_min,
+        'totalsec': length_sec,
+        'chosenmin': chosen_min,
+        'chosensec': chosen_sec,
+        '@spotifycode': path + f'spotify_code.png',
+        '@albumcover': path + f'album_cover.png'
         }
 
 with open(path + f'{track.name}.csv', 'w', newline="") as f:
